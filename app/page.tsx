@@ -1,5 +1,7 @@
+import PatientForm from "@/components/form/PatientForm";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -13,8 +15,20 @@ export default function Home() {
              alt="patient"
              className="mb-12 h-10 w-fit"
           />
+          <PatientForm />
+          <div className="text-14-regular mt-20 flex justify-between">
+            <p className="justify-items-end text-dark-600 xl:text-left">© 2024 Pet Groom </p>
+            <Link href="/?admin=true" className="text-green-500">Admin</Link>
+          </div>
         </div>
-    </section>
+      </section>
+      <Image
+        src="/assets/images/pet.png"
+        height={1000}
+        width={1000}
+        alt="dog"
+        className="side-img max-w-[50%]"
+      />
     </div>
   );
 }
